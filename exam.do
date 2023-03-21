@@ -1500,7 +1500,7 @@ TYPC085R	4236-4240	///
 TYPC086R	4241-4245	///
 TYPC087R	4246-4250	///
 TYPC088R	4251-4255	///
-using exam.DAT
+using "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.dat"
 lab var	SEQN	"Respondent identification number"
 lab var	DMPFSEQ	"Family sequence number"
 lab var	DMPSTAT	"Examination/interview status"
@@ -3001,4 +3001,3 @@ lab var	TYPC085R	"Equiv volume at  25 daPa, right ear (ml)"
 lab var	TYPC086R	"Equiv volume at  30 daPa, right ear (ml)"
 lab var	TYPC087R	"Equiv volume at  35 daPa, right ear (ml)"
 lab var	TYPC088R	"Equiv volume at  40 daPa, right ear (ml)"
-save exam.dta,replace

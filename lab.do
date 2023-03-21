@@ -356,7 +356,7 @@ URP	1956-1960	///
 URPSI	1961-1964	///
 UBP	1965-1970	///
 UIP	1971-1977	///
-using lab.DAT
+using "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab.dat"
 lab var	SEQN	"Sample person identification number"
 lab var	DMPFSEQ	"Family sequence number"
 lab var	DMPSTAT	"Examination/interview Status"
@@ -713,4 +713,3 @@ lab var	URP	"Urinary creatinine (mg/dL)"
 lab var	URPSI	"Urinary creatinine: SI (mmol/L)"
 lab var	UBP	"Urinary albumin (ug/mL)"
 lab var	UIP	"Urinary iodine (ug/dL)"
-save lab.dta,replace

@@ -1238,7 +1238,7 @@ HAZMNK1R	3337-3339	///
 HAZNOK1R	3340-3341	///
 HAZMNK5R	3342-3344	///
 HAZNOK5R	3345-3346	///
-using adult.DAT 
+using "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat"
 lab var	SEQN	"Sequence number"
 lab var	DMPFSEQ	"Family sequence number"
 lab var	DMPSTAT	"Examination/interview status"
@@ -2471,4 +2471,3 @@ lab var	HAZMNK1R	"Average K1 BP from household and MEC"
 lab var	HAZNOK1R	"Number of BP's used for average K1"
 lab var	HAZMNK5R	"Average K5 BP from household and MEC"
 lab var	HAZNOK5R	"Number of BP's used for average K5"
-save adult.dta,replace
