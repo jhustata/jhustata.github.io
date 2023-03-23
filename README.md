@@ -15,11 +15,11 @@
 **results**
 
 1. save .dta files
-2. merge adult, exam,lab
-3. then showcase stata!
+2. merge adult, exam, lab
+3. this way we get to showcase stata!
 
 **conclusions**
 
-1. for beginners
-2. quickly escalates
-3. easy to follow
+1. for beginners and mid-level programmers
+2. quickly escalate level of difficulty
+3. but always keep it easy to follow
