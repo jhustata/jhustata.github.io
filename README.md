@@ -1,15 +1,25 @@
 # jhustata.github.io
 
-place table1_options.ado, ind_translator.ado, 18_nhtable102feb2023.dta, and 01_nhtable1.do in your working directory
+**background**
 
+1. persons: students
+2. place: jhu
+3. time: enrollment in ph.340.600 
 
-```
-    pwd
-```
+**methods**
 
-open 18_nhtable102feb2023.dta
+1. [nhanes iii](https://wwwn.cdc.gov/nchs/nhanes/)
+2. adapt .sas files into .do files
+3. import data, label variables
 
-run 01_nhtable1.do
+**results**
 
-lookout for the output on your monitor and in your folder (Table1_Nondonors.xlsx)
+1. save .dta files
+2. merge adult, exam,lab
+3. then showcase stata!
 
+**conclusions**
+
+1. for beginners
+2. quickly escalates
+3. easy to follow
