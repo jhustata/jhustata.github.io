@@ -1,5 +1,5 @@
 *! inspired by 340.600.71 
-*! by Zhenghao(Vincent) Jin & Abi Muzaale
+*! by Vincent Jin & Abi Muzaale
 *! July 5, 2022 
 *! version 3.0
 
