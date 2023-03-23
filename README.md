@@ -9,7 +9,7 @@
 **methods**
 
 1. [nhanes iii](https://wwwn.cdc.gov/nchs/nhanes/)
-2. adapt .sas files into .do files
+2. translate .sas files into .do files
 3. import data, label variables
 
 **results**
