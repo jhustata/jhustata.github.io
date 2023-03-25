@@ -6,25 +6,26 @@ qui {
 		clear 
 		
 		capture log close 
-		log using adultlab.log, replace 
+		log using lab.log, replace 
 		
 		
         global url https://wwwn.cdc.gov/nchs/data/nhanes3/1a/ 
-		global sasprogram adult.sas
-		global datafile adult.dat
+		global sasprogram lab.sas
+		global datafile lab.dat
 		
 	}
 	
-	if 2 { //import adult.sas read-in commands
+	if 2 { //import lab.sas read-in commands
 		
 		import delimited ${url}$sasprogram
 
 	}
 	
-	if 3 { //output adult.do file read-in commands  
+	if 3 { //output lab.do file read-in commands  
 			
 		preserve 
-		   keep in 1387/2624
+		   keep in 640/995
+		   keep v1
 		   g id=_n+2
 		   insobs 1
 		   replace v1="#delimit ;" in `c(N)'
@@ -42,13 +43,13 @@ qui {
 		   sort id
 		   drop id
 		   tempfile vars
-           rename v1 concat 
-		   format concat %-20s
+		   format v1 %-20s
+		   rename v1 concat 
 		   keep concat 
 		   save `vars'
 		restore 
 		
-		keep in 2627/3865
+		keep in 998/1353
 	    split v1, p(" = ")
 	    gen concat="lab var "+v11+" "+v12
 		keep concat 
@@ -59,7 +60,7 @@ qui {
 		
 		use `vars', clear
 		append using `labs'
-    	outfile using "adult.do", noquote replace
+    	outfile using "lab.do", noquote replace
 		
 		log close 
 		
