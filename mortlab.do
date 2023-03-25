@@ -10,7 +10,7 @@
 						 3 "July-September" 
 						 4 "October-December" 
 						 .z "Ineligible, under age 18, or assumed alive";
-	 #delimit ac
+	 #delimit cr
      lab def dodyfmt .z "Ineligible, under age 18, or assumed alive"
      lab def ucodfmt 1 "Diseases of heart (I00-I09, I11, I13, I20-I51)"                           
      lab def ucodfmt 2 "Malignant neoplasms (C00-C97)"                                            , add
