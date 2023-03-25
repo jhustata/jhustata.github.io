@@ -1,0 +1,233 @@
+infix... 1988-1994/ADULT.DAT
+infix... 1988-1994/EXAM.DAT
+infix... 1988-1994/LAB.DAT
+import... 1999-2000 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2001-2002 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2003-2004 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2005-2006 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2007-2008 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2009-2010 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2011-2012 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2013-2014 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2015-2016 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+import... 2017-2018 from https://wwwn.cdc.gov/Nchs/Nhanes: demo
+append... demo 1
+append... demo 2
+append... demo 3
+append... demo 4
+append... demo 5
+append... demo 6
+append... demo 7
+append... demo 8
+append... demo 9
+append... demo 10
+append... demo 11
+compress...
+import... 1999-2000 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2001-2002 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2003-2004 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2005-2006 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2007-2008 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2009-2010 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2011-2012 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2013-2014 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2015-2016 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+import... 2017-2018 from https://wwwn.cdc.gov/Nchs/Nhanes: diet
+append... diet 1
+append... diet 2
+append... diet 3
+append... diet 4
+append... diet 5
+append... diet 6
+append... diet 7
+append... diet 8
+append... diet 9
+append... diet 10
+append... diet 11
+compressing...
+import... 1999-2000/BPX.XPT: exam
+import... 1999-2000/BMX.XPT: exam
+import... 2001-2002/BPX_B.XPT: exam
+import... 2001-2002/BMX_B.XPT: exam
+import... 2003-2004/BPX_C.XPT: exam
+import... 2003-2004/BMX_C.XPT: exam
+import... 2005-2006/BPX_D.XPT: exam
+import... 2005-2006/BMX_D.XPT: exam
+import... 2007-2008/BPX_E.XPT: exam
+import... 2007-2008/BMX_E.XPT: exam
+import... 2009-2010/BPX_F.XPT: exam
+import... 2009-2010/BMX_F.XPT: exam
+import... 2011-2012/BPX_G.XPT: exam
+import... 2011-2012/BMX_G.XPT: exam
+import... 2013-2014/BPX_H.XPT: exam
+import... 2013-2014/BMX_H.XPT: exam
+import... 2015-2016/BPX_I.XPT: exam
+import... 2015-2016/BMX_I.XPT: exam
+import... 2017-2018/BPX_J.XPT: exam
+import... 2017-2018/BMX_J.XPT: exam
+append... exam 1999 BPX
+append... exam 2001 BPX
+append... exam 2003 BPX
+append... exam 2005 BPX
+append... exam 2007 BPX
+append... exam 2009 BPX
+append... exam 2011 BPX
+append... exam 2013 BPX
+append... exam 2015 BPX
+append... exam 2017 BPX
+merge... exam 1999 BMX
+merge... exam 2001 BMX
+merge... exam 2003 BMX
+merge... exam 2005 BMX
+merge... exam 2007 BMX
+merge... exam 2009 BMX
+merge... exam 2011 BMX
+merge... exam 2013 BMX
+merge... exam 2015 BMX
+merge... exam 2017 BMX
+compressing...
+import... 1999-2000/LAB16.XPT: lab
+import... 1999-2000/LAB10.XPT: lab
+import... 1999-2000/LAB10AM.XPT: lab
+import... 1999-2000/LAB18.XPT: lab
+import... 2001-2002/L16_B.XPT: lab
+import... 2001-2002/L10_B.XPT: lab
+import... 2001-2002/L10AM_B.XPT: lab
+import... 2001-2002/L40_B.XPT: lab
+import... 2003-2004/L16_C.XPT: lab
+import... 2003-2004/L10_C.XPT: lab
+import... 2003-2004/L10AM_C.XPT: lab
+import... 2003-2004/L40_C.XPT: lab
+import... 2005-2006/ALB_CR_D.XPT: lab
+import... 2005-2006/GHB_D.XPT: lab
+import... 2005-2006/GLU_D.XPT: lab
+import... 2005-2006/BIOPRO_D.XPT: lab
+import... 2007-2008/ALB_CR_E.XPT: lab
+import... 2007-2008/GHB_E.XPT: lab
+import... 2007-2008/GLU_E.XPT: lab
+import... 2007-2008/BIOPRO_E.XPT: lab
+import... 2009-2010/ALB_CR_F.XPT: lab
+import... 2009-2010/GHB_F.XPT: lab
+import... 2009-2010/GLU_F.XPT: lab
+import... 2009-2010/BIOPRO_F.XPT: lab
+import... 2011-2012/ALB_CR_G.XPT: lab
+import... 2011-2012/GHB_G.XPT: lab
+import... 2011-2012/GLU_G.XPT: lab
+import... 2011-2012/BIOPRO_G.XPT: lab
+import... 2013-2014/ALB_CR_H.XPT: lab
+import... 2013-2014/GHB_H.XPT: lab
+import... 2013-2014/GLU_H.XPT: lab
+import... 2013-2014/BIOPRO_H.XPT: lab
+import... 2015-2016/ALB_CR_I.XPT: lab
+import... 2015-2016/GHB_I.XPT: lab
+import... 2015-2016/GLU_I.XPT: lab
+import... 2015-2016/BIOPRO_I.XPT: lab
+import... 2017-2018/ALB_CR_J.XPT: lab
+import... 2017-2018/GHB_J.XPT: lab
+import... 2017-2018/GLU_J.XPT: lab
+import... 2017-2018/BIOPRO_J.XPT: lab
+1999
+2001
+2003
+2005
+2007
+2009
+2011
+2013
+2015
+2017
+compressing...
+file nhlab.dta saved
+import... 1999-2000/BPQ.XPT: q&a
+import... 1999-2000/CDQ.XPT: q&a
+import... 1999-2000/HSQ.XPT: q&a
+import... 1999-2000/DIQ.XPT: q&a
+import... 1999-2000/HIQ.XPT: q&a
+import... 1999-2000/KIQ.XPT: q&a
+import... 1999-2000/MCQ.XPT: q&a
+import... 1999-2000/PAQ.XPT: q&a
+import... 1999-2000/SMQ.XPT: q&a
+import... 2001-2002/BPQ_B.XPT: q&a
+import... 2001-2002/CDQ_B.XPT: q&a
+import... 2001-2002/HSQ_B.XPT: q&a
+import... 2001-2002/DIQ_B.XPT: q&a
+import... 2001-2002/HIQ_B.XPT: q&a
+import... 2001-2002/KIQ_U_B.XPT: q&a
+import... 2001-2002/MCQ_B.XPT: q&a
+import... 2001-2002/PAQ_B.XPT: q&a
+import... 2001-2002/SMQ_B.XPT: q&a
+import... 2003-2004/BPQ_C.XPT: q&a
+import... 2003-2004/CDQ_C.XPT: q&a
+import... 2003-2004/HSQ_C.XPT: q&a
+import... 2003-2004/DIQ_C.XPT: q&a
+import... 2003-2004/HIQ_C.XPT: q&a
+import... 2003-2004/KIQ_U_C.XPT: q&a
+import... 2003-2004/MCQ_C.XPT: q&a
+import... 2003-2004/PAQ_C.XPT: q&a
+import... 2003-2004/SMQ_C.XPT: q&a
+import... 2005-2006/BPQ_D.XPT: q&a
+import... 2005-2006/CDQ_D.XPT: q&a
+import... 2005-2006/HSQ_D.XPT: q&a
+import... 2005-2006/DIQ_D.XPT: q&a
+import... 2005-2006/HIQ_D.XPT: q&a
+import... 2005-2006/KIQ_U_D.XPT: q&a
+import... 2005-2006/MCQ_D.XPT: q&a
+import... 2005-2006/PAQ_D.XPT: q&a
+import... 2005-2006/SMQ_D.XPT: q&a
+import... 2007-2008/BPQ_E.XPT: q&a
+import... 2007-2008/CDQ_E.XPT: q&a
+import... 2007-2008/HSQ_E.XPT: q&a
+import... 2007-2008/DIQ_E.XPT: q&a
+import... 2007-2008/HIQ_E.XPT: q&a
+import... 2007-2008/KIQ_U_E.XPT: q&a
+import... 2007-2008/MCQ_E.XPT: q&a
+import... 2007-2008/PAQ_E.XPT: q&a
+import... 2007-2008/SMQ_E.XPT: q&a
+import... 2009-2010/BPQ_F.XPT: q&a
+import... 2009-2010/CDQ_F.XPT: q&a
+import... 2009-2010/HSQ_F.XPT: q&a
+import... 2009-2010/DIQ_F.XPT: q&a
+import... 2009-2010/HIQ_F.XPT: q&a
+import... 2009-2010/KIQ_U_F.XPT: q&a
+import... 2009-2010/MCQ_F.XPT: q&a
+import... 2009-2010/PAQ_F.XPT: q&a
+import... 2009-2010/SMQ_F.XPT: q&a
+import... 2011-2012/BPQ_G.XPT: q&a
+import... 2011-2012/CDQ_G.XPT: q&a
+import... 2011-2012/HSQ_G.XPT: q&a
+import... 2011-2012/DIQ_G.XPT: q&a
+import... 2011-2012/HIQ_G.XPT: q&a
+import... 2011-2012/KIQ_U_G.XPT: q&a
+import... 2011-2012/MCQ_G.XPT: q&a
+import... 2011-2012/PAQ_G.XPT: q&a
+import... 2011-2012/SMQ_G.XPT: q&a
+import... 2013-2014/BPQ_H.XPT: q&a
+import... 2013-2014/CDQ_H.XPT: q&a
+import... 2013-2014/HSQ_H.XPT: q&a
+import... 2013-2014/DIQ_H.XPT: q&a
+import... 2013-2014/HIQ_H.XPT: q&a
+import... 2013-2014/KIQ_U_H.XPT: q&a
+import... 2013-2014/MCQ_H.XPT: q&a
+import... 2013-2014/PAQ_H.XPT: q&a
+import... 2013-2014/SMQ_H.XPT: q&a
+import... 2015-2016/BPQ_I.XPT: q&a
+import... 2015-2016/CDQ_I.XPT: q&a
+import... 2015-2016/HSQ_I.XPT: q&a
+import... 2015-2016/DIQ_I.XPT: q&a
+import... 2015-2016/HIQ_I.XPT: q&a
+import... 2015-2016/KIQ_U_I.XPT: q&a
+import... 2015-2016/MCQ_I.XPT: q&a
+import... 2015-2016/PAQ_I.XPT: q&a
+import... 2015-2016/SMQ_I.XPT: q&a
+import... 2017-2018/BPQ_J.XPT: q&a
+import... 2017-2018/CDQ_J.XPT: q&a
+import... 2017-2018/HSQ_J.XPT: q&a
+import... 2017-2018/DIQ_J.XPT: q&a
+import... 2017-2018/HIQ_J.XPT: q&a
+import... 2017-2018/KIQ_U_J.XPT: q&a
+import... 2017-2018/MCQ_J.XPT: q&a
+import... 2017-2018/PAQ_J.XPT: q&a
+import... 2017-2018/SMQ_J.XPT: q&a
+compressing...
+file nhqa.dta saved
+runtime = 17 minute(s)
