@@ -10,7 +10,7 @@ qui {
         capture log close
         global date: di %td date(c(current_date),"DMY")
 		
-        log using "nh$date.log", replace
+        log using "nh.dfs.log", replace
 
         global nh3 https://wwwn.cdc.gov/nchs/data/nhanes3/1a/
         global nhanes "https://wwwn.cdc.gov/Nchs/Nhanes" 
@@ -19,9 +19,28 @@ qui {
 	    global examdo jhustata/jhustata.github.io/main/exam.do
 	    global labdo jhustata/jhustata.github.io/main/lab.do
         global start = clock(c(current_time),"hms")/10^3
-        global continuous "1999 2001 2003 2005 2007 2009 2011 2013 2015 2017"
+        
+		global continuous "1999 2001 2003 2005 2007 2009 2011 2013 2015 2017"
+       
+	    global nchs https://ftp.cdc.gov/pub/Health_Statistics/NCHS/
+        global linkage datalinkage/linked_mortality/
+	    global nh3 NHANES_III
+        global mort _MORT_2019_PUBLIC.dat
+		global mortlab https://raw.githubusercontent.com/jhustata/jhustata.github.io/main/mortlab.do
 
-	 
+		#delimit ;
+        global varlist  
+           seqn 1-6  
+           eligstat 15  
+	       mortstat 16  
+	       ucod_leading 17-19  
+           diabetes 20  
+	       hyperten 21  
+	       permth_int 43-45  
+	       permth_exm 46-48 ;
+	    #delimit cr
+     
+	    global nhfiles nhdemo nhdiet nhexam nhlab nhqa nhmort
 		timer off 1
 	}
 	
@@ -30,18 +49,21 @@ qui {
 		timer on 2
 		
 	    noi di "infix... 1988-1994/ADULT.DAT" 
+		clear 
         do $github$adultdo
         tempfile qa 
 	    rename *, lower
         save `qa'  
         
 		noi di "infix... 1988-1994/EXAM.DAT" 
+		clear 
         do $github$examdo
         tempfile exam
 	    rename *,lower
         save `exam'
      
 	    noi di "infix... 1988-1994/LAB.DAT" 
+		clear 
 	    do $github$labdo
         tempfile lab
 	    rename *,lower
@@ -305,10 +327,7 @@ qui {
 	    sample `sample'
 	    lab dat "`sample'% of NHANES 1988-2018, Labs"
 	    noi save "nhlab", replace 
-	    timer off 6
-	
-	    noi timer list
-		
+	    timer off 6		
 		
 		}
 		
@@ -385,14 +404,67 @@ qui {
 	    noi save "nhqa", replace 
 	    timer off 7
 	
-	    noi timer list
         global finish  = clock(c(current_time),"hms")/10^3
         global duration = round(($finish - $start)/60,1)
 
         noi di "runtime = $duration minute(s)"
-		//timer clear 
-		log close 
 		
 	}
 	
+	if 8 { //mortality: 1988-2018
+		
+		timer on 8
+		
+		infix $varlist using $nchs$linkage$nh3$mort, clear
+		replace seqn=-1*seqn
+		tempfile dat0
+		save `dat0'
+		local N=1
+		foreach y of numlist $continuous {
+			local yplus1=`y' + 1  
+         	
+	        local nhanes NHANES_`y'_`yplus1'
+            infix $varlist using $nchs$linkage`nhanes'$mort, clear
+	        tempfile dat`N'
+	        save `dat`N''
+	        local N=`N'+1
+			
+		}
+		
+		use `dat0', clear
+        forvalues i=1/10 {
+	       append using `dat`i''
+        }
+		
+		do $mortlab
+		drop if inlist(eligstat,2,3)
+		duplicates drop 
+		
+		lab dat "NHANES 1988-2018, mortality"
+		noi save "nhmort", replace 
+		timer off 9
+		
+	}
+
+	if 9 { //merge files: blocks 3-7
+
+		timer on 9
+		local dat: di word("$nhfiles",1)
+		use `dat',clear 
+		forvalues i=2/6 {
+		   local dat: di word("$nhfiles",`i')
+		   duplicates drop seqn,force
+		   merge 1:m seqn using `dat',nogen
+		   noi di word("$nhfiles",`i')
+		   duplicates drop seqn,force 
+		}
+		
+        save nhdataset,replace 
+		timer off 9
+		noi di "obs `c(N)', vars `c(k)'"
+		noi timer list 
+		timer clear 
+		log close 
+	}
+
 }
