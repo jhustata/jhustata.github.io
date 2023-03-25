@@ -1,0 +1,6 @@
+import delimited using https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.sas
+outfile using adult.do
+import delimited using https://wwwn.cdc.gov/nchs/data/nhanes3/1a/exam.sas
+outfile using exam.do
+import delimited using https://wwwn.cdc.gov/nchs/data/nhanes3/1a/lab.sas
+outfile using lab.do
