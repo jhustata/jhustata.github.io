@@ -24,7 +24,7 @@ qui {
 		   	
 				local file: di word("$fyl",`i')
 		        import delimited using "${url}`file'.sas",clear
-				noi di "import delimited using ${url}`file'.sas"
+				noi di "import using `file'.sas"
 
 		   }
 
