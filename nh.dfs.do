@@ -403,11 +403,6 @@ qui {
 	    lab dat "`sample'% of NHANES 1988-2018, q&a"
 	    noi save "nhqa", replace 
 	    timer off 7
-	
-        global finish  = clock(c(current_time),"hms")/10^3
-        global duration = round(($finish - $start)/60,1)
-
-        noi di "runtime = $duration minute(s)"
 		
 	}
 	
@@ -464,6 +459,9 @@ qui {
 		noi di "obs `c(N)', vars `c(k)'"
 		noi timer list 
 		timer clear 
+        global finish  = clock(c(current_time),"hms")/10^3
+        global duration = round(($finish - $start)/60,1)
+        noi di "runtime = $duration minute(s)"		
 		log close 
 	}
 

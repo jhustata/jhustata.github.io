@@ -230,4 +230,20 @@ import... 2017-2018/PAQ_J.XPT: q&a
 import... 2017-2018/SMQ_J.XPT: q&a
 compressing...
 file nhqa.dta saved
+file nhmort.dta saved
+nhdiet
+nhexam
+nhlab
+nhqa
+nhmort
+obs 134515, vars 4948
+   1:      0.00 /        1 =       0.0040
+   2:    161.67 /        1 =     161.6710
+   3:    291.89 /        1 =     291.8920
+   4:    347.48 /        1 =     347.4780
+   5:     24.58 /        1 =      24.5840
+   6:     18.87 /        1 =      18.8730
+   7:    181.37 /        1 =     181.3720
+   8:      0.00 /        1 =       0.0000
+   9:     10.92 /        1 =      10.9210
 runtime = 17 minute(s)
